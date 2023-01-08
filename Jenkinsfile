@@ -5,7 +5,7 @@ pipeline {
 //             args '-v /root/.m2:/root/.m2'
 //         }
 //     }
-    agent any
+    agent { label 'jenkins_agent' }
     stages {
         stage('Build') {
             steps {
