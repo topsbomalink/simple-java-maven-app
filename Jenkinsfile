@@ -5,7 +5,10 @@ pipeline {
 //             args '-v /root/.m2:/root/.m2'
 //         }
 //     }
-    agent { label 'jenkins_agent' }
+    agent { label 'jenkins_agent'}
+    tools {
+      maven '3.8.7'
+    }
     stages {
         stage('Build') {
             steps {
