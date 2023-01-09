@@ -9,7 +9,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'source /etc/profile'
                 sh 'mvn -B -DskipTests clean package'
             }
         }
