@@ -17,7 +17,7 @@ pipeline {
         }
         stage('docker') {
             steps {
-                scripts{
+                script{
                     app = docker.build("simple-java-maven-app")
                 }
             }
