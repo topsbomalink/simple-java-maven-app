@@ -15,5 +15,13 @@ pipeline {
                 sh 'mvn -B -DskipTests clean package'
             }
         }
+        stage('docker') {
+            steps {
+                scripts{
+                    app = docker.build("simple-java-maven-app")
+                }
+            }
+        }
     }
+    
 }
